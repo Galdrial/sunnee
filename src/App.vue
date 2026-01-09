@@ -2,4 +2,5 @@
   <div>
     <!-- App principale -->
   </div>
+  
 </template>
