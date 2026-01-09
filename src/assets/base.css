@@ -1,4 +1,12 @@
 @import "tailwindcss";
+@font-face {
+  font-family: 'ComicRelief';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/ComicRelief-Regular.ttf') format('truetype'),
+       url('./fonts/ComicRelief-Bold.ttf') format('truetype');
+  font-display: swap;
+}
 
 *,
 *::before,
@@ -9,9 +17,14 @@
 }
 
 body {
+  background-image: url('./img/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
   line-height: 1.6;
   font-family:
+    'ComicRelief',
     Inter,
     -apple-system,
     BlinkMacSystemFont,
