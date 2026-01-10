@@ -7,7 +7,7 @@
         style="position: relative; width: 150px; z-index: 10"
       />
       <router-link to="/configurator" style="text-decoration: none">
-      <button type="button" class="custom-pill-btn">Inizia</button>
+      <button type="button" class="custom-pill-btn">Start</button>
       </router-link>
     </div>
     <div>
@@ -16,17 +16,17 @@
     </div>
     <div class="bottle-container">
       <img
-        src="../assets/img/tappo2.png"
+        src="../assets/img/cap.png"
         class="layer cap"
         style="background-color: rgb(251, 170, 161); mix-blend-mode: multiply"
       />
       <img
-        src="../assets/img/corpo2.png"
+        src="../assets/img/body.png"
         class="layer body"
         style="background-color: rgb(210, 251, 212); mix-blend-mode: multiply"
       />
       <img
-        src="../assets/img/fondo2.png"
+        src="../assets/img/bottom.png"
         class="layer bottom"
         style="background-color: rgb(183, 238, 251); mix-blend-mode: multiply"
       />
@@ -36,31 +36,5 @@
   </div>
 </template>
 <style scoped>
-.bottle-container {
-  position: relative;
-  width: 350px;
-  height: 500px;
-  margin: 0 auto;
-}
 
-.layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-.custom-pill-btn {
-  position: relative;
-  border-radius: 50px;
-  font-size: 25px;
-  font-weight: bolder;
-  color: white;
-  background-color: rgb(132, 190, 135);
-  border: 0px;
-  padding: 5px 50px;
-  cursor: pointer;
-  height: 65px;
-  width: auto;
-  display: inline-block;
-}
 </style>

@@ -42,3 +42,49 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.bottle-container {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.bottle-container-configurator {
+  position: absolute;
+  width: 350px;
+  height: 500px;
+  left: 1160px;
+  top: 250px;
+  margin: 0 auto;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.custom-pill-btn {
+  position: relative;
+  border-radius: 50px;
+  font-size: 25px;
+  font-weight: bolder;
+  color: white;
+  background-color: rgb(132, 190, 135);
+  border: 0px;
+  padding: 5px 50px;
+  cursor: pointer;
+  height: 65px;
+  width: auto;
+  display: inline-block;
+}
+
+button {
+  z-index: 10;
+}
+
+button[style*="border"]:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}

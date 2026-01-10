@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
-import { useSunneeStore } from '@/stores/sunnee'
+import { RouterLink } from 'vue-router';
+import { useSunneeStore } from '@/stores/sunnee';
 </script>
 
 <template>
   <div>
     <div class="flex flex-row justify-between items-center">
-      <img
-        src="../assets/img/logo2.png"
-        alt="layer-label"
-        style="position: relative; width: 150px; z-index: 10"
-      />
-      <router-link to="/" style="text-decoration: none">
+        <img
+          src="../assets/img/logo2.png"
+          alt="layer-label"
+          style="position: relative; width: 150px; z-index: 10"
+        />
+        <router-link to="/" style="text-decoration: none">
         <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn">
           Home
         </button>
@@ -19,10 +19,9 @@ import { useSunneeStore } from '@/stores/sunnee'
     </div>
     <div>
       <!-- App principale -->
-      <h1 class="text-6xl font-bold text-center pt-4 pr-55">Scegli il colore del tappo</h1>
+      <h1 class="text-6xl font-bold text-center pt-4 pr-55">Scegli il colore del corpo</h1>
     </div>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(210, 251, 212)')"
+    <button v-on:click="useSunneeStore().setBodyColor('rgb(210, 251, 212)')"
       class="verde"
       type="button"
       style="
@@ -39,8 +38,7 @@ import { useSunneeStore } from '@/stores/sunnee'
         cursor: pointer;
       "
     ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(251, 170, 161)')"
+    <button v-on:click="useSunneeStore().setBodyColor('rgb(251, 170, 161)')"
       class="rosso"
       type="button"
       style="
@@ -57,8 +55,7 @@ import { useSunneeStore } from '@/stores/sunnee'
         cursor: pointer;
       "
     ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(183, 238, 251)')"
+    <button v-on:click="useSunneeStore().setBodyColor('rgb(183, 238, 251)')"
       class="azzurro"
       type="button"
       style="
@@ -75,8 +72,7 @@ import { useSunneeStore } from '@/stores/sunnee'
         cursor: pointer;
       "
     ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('whitesmoke')"
+    <button v-on:click="useSunneeStore().setBodyColor('whitesmoke')"
       class="bianco"
       type="button"
       style="
@@ -93,8 +89,7 @@ import { useSunneeStore } from '@/stores/sunnee'
         cursor: pointer;
       "
     ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(183, 183, 251)')"
+    <button   v-on:click="useSunneeStore().setBodyColor('rgb(183, 183, 251)')"
       class="viola"
       type="button"
       style="
@@ -111,8 +106,7 @@ import { useSunneeStore } from '@/stores/sunnee'
         cursor: pointer;
       "
     ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(251, 183, 238)')"
+    <button   v-on:click="useSunneeStore().setBodyColor('rgb(251, 183, 238)')"
       class="rosa"
       type="button"
       style="
@@ -125,12 +119,11 @@ import { useSunneeStore } from '@/stores/sunnee'
         font-size: 25px;
         font-weight: bolder;
         background-color: rgb(251, 183, 238);
-        border: 2px solid rgb(251, 130, 255);
+       border: 2px solid rgb(251, 130, 255);
         cursor: pointer;
       "
     ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(140, 139, 139)')"
+    <button  v-on:click="useSunneeStore().setBodyColor('rgb(140, 139, 139)')"
       class="grigio"
       type="button"
       style="
@@ -147,8 +140,7 @@ import { useSunneeStore } from '@/stores/sunnee'
         cursor: pointer;
       "
     ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(251, 183, 140)')"
+    <button v-on:click="useSunneeStore().setBodyColor('rgb(251, 183, 140)')"
       class="arancio"
       type="button"
       style="
@@ -161,12 +153,11 @@ import { useSunneeStore } from '@/stores/sunnee'
         font-size: 25px;
         font-weight: bolder;
         background-color: rgb(251, 183, 140);
-        border: 2px solid rgb(255, 125, 0);
+       border: 2px solid rgb(255, 125, 0);
         cursor: pointer;
       "
     ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('gold')"
+    <button v-on:click="useSunneeStore().setBodyColor('gold')"
       class="oro"
       type="button"
       style="
@@ -183,8 +174,7 @@ import { useSunneeStore } from '@/stores/sunnee'
         cursor: pointer;
       "
     ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('silver')"
+    <button v-on:click="useSunneeStore().setBodyColor('silver')"
       class="silver"
       type="button"
       style="
@@ -207,13 +197,13 @@ import { useSunneeStore } from '@/stores/sunnee'
     </router-link>
     </div>
     <div class="flex gap-4 absolute top-156 left-212">
-      <router-link to="/configurator" style="text-decoration: none">
-        <button type="button" class="custom-pill-btn invisible">Back</button>
-      </router-link>
-      <router-link to="/step-2" style="text-decoration: none">
-        <button type="button" class="custom-pill-btn">Next</button>
-      </router-link>
-    </div>
+        <router-link to="/configurator" style="text-decoration: none">
+          <button type="button" class="custom-pill-btn">Back</button>
+        </router-link>
+        <router-link to="/step-3" style="text-decoration: none">
+          <button type="button" class="custom-pill-btn">Next</button>
+        </router-link>
+      </div>
     <div class="bottle-container-configurator">
       <!--     <img src=" sfondo.png" class="layer cap" />
   <img src="sfondo1.png" class="layer cap" />

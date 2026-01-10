@@ -9,6 +9,18 @@ const routes = [
   {
     path: '/configurator',
     component: () => import('./components/ConfiguratorView.vue'),
+  },
+  {
+    path: '/step-2',
+    component: () => import('./components/Step2View.vue'),
+  },
+  {
+    path: '/step-3',
+    component: () => import('./components/Step3View.vue'),
+  },
+  {
+    path  : '/thanks',
+    component: () => import('./components/ThanksView.vue'),
   }
 ]
 
