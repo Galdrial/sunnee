@@ -80,6 +80,25 @@ body {
   display: inline-block;
 }
 
+.custom-pill-btn:hover {
+  background-color: rgb(110, 160, 115);
+  transition: all 0.3s ease;
+}
+
+.custom-step-btn {
+  position: relative;
+  border-radius: 50px;
+  font-size: 25px;
+  font-weight: bolder;
+  color: white;
+  background-color: rgb(132, 190, 135);
+  border: 0px;
+  padding: 5px 50px;
+  height: 65px;
+  width: auto;
+  display: inline-block;
+}
+
 button {
   z-index: 10;
 }

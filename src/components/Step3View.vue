@@ -11,6 +11,7 @@ import { useSunneeStore } from '@/stores/sunnee';
           alt="layer-label"
           style="position: relative; width: 150px; z-index: 10"
         />
+        <button class="custom-step-btn">Step 3/3</button>
       <router-link to="/" style="text-decoration: none">
         <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn">
           Home
