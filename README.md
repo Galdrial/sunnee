@@ -1,48 +1,51 @@
-# .
 
-This template should help get you started developing with Vue 3 in Vite.
+# Sunnee – Sustainable Kids Bottle Configurator
 
-## Recommended IDE Setup
+Welcome to Sunnee, the interactive web app for customizing your own sustainable kids bottle! 🌊
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Preview
 
-## Recommended Browser Setup
+![Sunnee Preview](public/sunnee-og.png)
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Live Demo
 
-## Type Support for `.vue` Imports in TS
+👉 [Try the Demo](https://sunnee.vercel.app/)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Project Overview
+Sunnee is a Vue.js application designed to raise awareness about recycling and sustainability among children. With Sunnee, users can personalize the cap, body, and bottom colors of their eco-friendly bottle and see a real-time preview before confirming their choice.
 
-## Customize configuration
+### Features
+- **Step-by-step configurator**: Choose the color of each bottle part in a guided flow.
+- **10 color options**: Select from a palette of predefined, vibrant colors.
+- **Live preview**: See your bottle update instantly as you pick colors.
+- **Welcome & Thank You pages**: Friendly onboarding and creative closing.
+- **Responsive design**: Optimized for both desktop and mobile devices.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Tech Stack
+- [Vue 3](https://vuejs.org/)
+- [Pinia](https://pinia.vuejs.org/) (state management)
+- [Vite](https://vitejs.dev/) (build tool)
+- [Tailwind CSS](https://tailwindcss.com/) (utility-first CSS)
 
-## Project Setup
+## Getting Started
+1. Clone the repo:
+  ```sh
+  git clone https://github.com/your-username/sunnee.git
+  cd sunnee
+  ```
+2. Install dependencies:
+  ```sh
+  npm install
+  ```
+3. Run the development server:
+  ```sh
+  npm run dev
+  ```
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-```sh
-npm install
-```
+## License
+MIT
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Made with ❤️ by the Simone Camerano.
