@@ -1,7 +1,34 @@
 <script setup lang="ts">
 // Import the store for managing bottle state and steps
-import { useSunneeStore } from '@/stores/sunnee'
+import { useSunneeStore } from '@/stores/sunnee';
+import { onMounted, watch } from 'vue';
+// All'avvio, sincronizza lo step con l'URL
+onMounted(() => {
+  const match = window.location.pathname.match(/step-(\d)/);
+  if (match) {
+    const stepStr = match[1];
+    if (stepStr !== undefined) {
+      const stepNum = parseInt(stepStr, 10);
+      if (stepNum >= 1 && stepNum <= 3) {
+        sunneeStore.step = stepNum;
+      }
+    }
+  }
+});
 const sunneeStore = useSunneeStore()
+
+// Aggiorna l'URL ad ogni cambio step
+watch(
+  () => sunneeStore.step,
+  (newStep) => {
+    // Aggiorna solo se siamo nella pagina configurator
+    if (window.location.pathname.startsWith('/configurator')) {
+      const stepUrl = `/configurator/step-${newStep}`;
+      window.history.replaceState(null, '', stepUrl);
+    }
+  },
+  { immediate: true }
+)
 
 // Handle color selection for each bottle part based on the current step
 function handleColorClick(value: string) {
