@@ -1,9 +1,11 @@
 <script setup lang="ts">
+// Import the bottle preview component for visualizing the bottle
 import BottlePreview from './BottlePreview.vue';
 </script>
 
 <template>
   <main>
+    <!-- Welcome message and project introduction -->
     <section>
       <h1>Welcome to the Sunnee Kids Bottle Configurator!</h1>
       <p class="relative w-100 h-30 text-2xl pb-0 pt-30 left-70">
@@ -11,6 +13,7 @@ import BottlePreview from './BottlePreview.vue';
         Together, we can turn plastic waste into a valuable resource. Start designing your bottle now every choice makes a difference!
       </p>
     </section>
+    <!-- Bottle preview with example colors -->
     <figure class="flex justify-center items-center relative left-70 bottom-35 -z-10">
       <BottlePreview
         capColor="rgb(251, 170, 161)"

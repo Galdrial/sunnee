@@ -7,10 +7,12 @@
         We can’t wait for you to enjoy your personalized bottle. Stay inspired and keep making a difference!
       </p>
     </section>
-    <figure class="flex justify-center items-center relative left-70 bottom-35 -z-10">
-      <BottlePreview />
-      <figcaption class="sr-only">Bottle preview with your selected colors</figcaption>
-    </figure>
+      <!-- Thank you message and summary -->
+      <figure class="flex justify-center items-center relative left-70 bottom-35 -z-10">
+        <BottlePreview />
+        <figcaption class="sr-only">Bottle preview with your selected colors</figcaption>
+      </figure>
+      <!-- Bottle preview with the user's selected colors -->
   </main>
 </template>
 <script setup lang="ts">

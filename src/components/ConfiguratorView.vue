@@ -1,7 +1,9 @@
 <script setup lang="ts">
+// Import the store for managing bottle state and steps
 import { useSunneeStore } from '@/stores/sunnee'
 const sunneeStore = useSunneeStore()
 
+// Handle color selection for each bottle part based on the current step
 function handleColorClick(value: string) {
   if (sunneeStore.step === 1) {
     sunneeStore.setCapColor(value)
@@ -15,14 +17,17 @@ function handleColorClick(value: string) {
 
 <template>
   <main>
+    <!-- Step title and current part selection -->
     <section>
       <h1 class="h1Configurator">Choose the color of the</h1>
       <h2 v-if="sunneeStore.step === 1" class="h2Configurator">CAP</h2>
       <h2 v-else-if="sunneeStore.step === 2" class="h2Configurator">BODY</h2>
       <h2 v-else-if="sunneeStore.step === 3" class="h2Configurator">BOTTOM</h2>
     </section>
+    <!-- Color selection buttons and bottle preview -->
     <section class="flex flex-row items-center w-full justify-center">
       <div class="grid grid-cols-5 gap-6 justify-items-center items-center w-200 pl-55 pb-40">
+        <!-- Color selection buttons -->
         <button
           v-for="[name, value] in Object.entries(sunneeStore.colors)"
           :key="name"
@@ -34,6 +39,7 @@ function handleColorClick(value: string) {
           {{ name.charAt(0).toUpperCase() + name.slice(1) }}
         </button>
       </div>
+      <!-- Bottle preview with current selected colors -->
       <figure class="bottle-container right-6 bottom-40">
         <img
           src="../assets/img/cap.png"
@@ -55,6 +61,7 @@ function handleColorClick(value: string) {
         <figcaption class="sr-only">Bottle preview with selected colors</figcaption>
       </figure>
     </section>
+    <!-- Navigation buttons for steps -->
     <nav class="relative bottom-35 flex pl-54 justify-start gap-26" aria-label="Step navigation">
       <div>
         <router-link to="/configurator" style="text-decoration: none">
