@@ -5,215 +5,81 @@ import { useSunneeStore } from '@/stores/sunnee'
 
 <template>
   <div>
-    <div class="flex flex-row justify-between items-center">
-      <img
-        src="../assets/img/logo2.png"
-        alt="layer-label"
-        style="position: relative; width: 150px; z-index: 10"
-      />
+    <div class="flex flex-col gap-4 sm:flex-row sm:pr-58 items-center justify-center">
+      <!-- App principale -->
+      <h1 class="text-5xl font-bold text-center py-4 px-2 sm:pr-20 sm:pl-48">
+        Scegli il colore del tappo
+      </h1>
       <button class="custom-step-btn">Step 1/3</button>
-      <router-link to="/" style="text-decoration: none">
+    </div>
+    <div class="grid grid-cols-5 gap-6 justify-items-center items-center w-213 pt-22 pl-48">
+      <button
+        v-on:click="useSunneeStore().setCapColor('rgb(210, 251, 212)')"
+        class="rounded-full w-30 h-30 text-xl font-bold border-2 border-green-500 bg-[rgb(210,251,212)] shadow-md hover:scale-105 transition"
+        aria-label="Verde"
+      ></button>
+      <button
+        v-on:click="useSunneeStore().setCapColor('rgb(251, 170, 161)')"
+        class="rounded-full w-30 h-30 text-xl font-bold border-2 border-red-500 bg-[rgb(251,170,161)] shadow-md hover:scale-105 transition"
+        aria-label="Rosso"
+      ></button>
+      <button
+        v-on:click="useSunneeStore().setCapColor('rgb(183, 238, 251)')"
+        class="rounded-full w-30 h-30 text-xl font-bold border-2 border-blue-400 bg-[rgb(183,238,251)] shadow-md hover:scale-105 transition"
+        aria-label="Azzurro"
+      ></button>
+      <button
+        v-on:click="useSunneeStore().setCapColor('whitesmoke')"
+        class="rounded-full w-30 h-30 text-xl font-bold border-2 border-gray-400 bg-[whitesmoke] shadow-md hover:scale-105 transition"
+        aria-label="Bianco"
+      ></button>
+      <button
+        v-on:click="useSunneeStore().setCapColor('rgb(183, 183, 251)')"
+        class="rounded-full w-30 h-30 text-xl font-bold border-2 border-indigo-500 bg-[rgb(183,183,251)] shadow-md hover:scale-105 transition"
+        aria-label="Viola"
+      ></button>
+      <button
+        v-on:click="useSunneeStore().setCapColor('rgb(251, 183, 238)')"
+        class="rounded-full w-30 h-30 text-xl font-bold border-2 border-pink-400 bg-[rgb(251,183,238)] shadow-md hover:scale-105 transition"
+        aria-label="Rosa"
+      ></button>
+      <button
+        v-on:click="useSunneeStore().setCapColor('rgb(140, 139, 139)')"
+        class="rounded-full w-30 h-30 text-xl font-bold border-2 border-gray-600 bg-[rgb(140,139,139)] shadow-md hover:scale-105 transition"
+        aria-label="Grigio"
+      ></button>
+      <button
+        v-on:click="useSunneeStore().setCapColor('rgb(251, 183, 140)')"
+        class="rounded-full w-30 h-30 text-xl font-bold border-2 border-orange-400 bg-[rgb(251,183,140)] shadow-md hover:scale-105 transition"
+        aria-label="Arancio"
+      ></button>
+      <button
+        v-on:click="useSunneeStore().setCapColor('gold')"
+        class="rounded-full w-30 h-30 text-xl font-bold border-2 border-yellow-400 bg-[gold] shadow-md hover:scale-105 transition"
+        aria-label="Oro"
+      ></button>
+      <button
+        v-on:click="useSunneeStore().setCapColor('silver')"
+        class="rounded-full w-30 h-30 text-xl font-bold border-2 border-gray-300 bg-[silver] shadow-md hover:scale-105 transition"
+        aria-label="Argento"
+      ></button>
+    </div>
+    <div class="flex pt-18 pl-44 justify-start gap-48">
+    <div>
+      <router-link to="/configurator" style="text-decoration: none">
         <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn">
-          Home
+          Reset
         </button>
       </router-link>
     </div>
     <div>
-      <!-- App principale -->
-      <h1 class="text-6xl font-bold text-center pt-4 pr-55">Scegli il colore del tappo</h1>
-    </div>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(210, 251, 212)')"
-      class="verde"
-      type="button"
-      style="
-        position: absolute;
-        left: 500px;
-        top: 320px;
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        font-size: 25px;
-        font-weight: bolder;
-        background-color: rgb(210, 251, 212);
-        border: 2px solid rgb(59, 197, 66);
-        cursor: pointer;
-      "
-    ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(251, 170, 161)')"
-      class="rosso"
-      type="button"
-      style="
-        position: absolute;
-        left: 640px;
-        top: 320px;
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        font-size: 25px;
-        font-weight: bolder;
-        background-color: rgb(251, 170, 161);
-        border: 2px solid rgb(197, 59, 59);
-        cursor: pointer;
-      "
-    ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(183, 238, 251)')"
-      class="azzurro"
-      type="button"
-      style="
-        position: absolute;
-        left: 780px;
-        top: 320px;
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        font-size: 25px;
-        font-weight: bolder;
-        background-color: rgb(183, 238, 251);
-        border: 2px solid rgb(0, 123, 255);
-        cursor: pointer;
-      "
-    ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('whitesmoke')"
-      class="bianco"
-      type="button"
-      style="
-        position: absolute;
-        left: 920px;
-        top: 320px;
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        font-size: 25px;
-        font-weight: bolder;
-        background-color: whitesmoke;
-        border: 2px solid grey;
-        cursor: pointer;
-      "
-    ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(183, 183, 251)')"
-      class="viola"
-      type="button"
-      style="
-        position: absolute;
-        left: 1060px;
-        top: 320px;
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        font-size: 25px;
-        font-weight: bolder;
-        background-color: rgb(183, 183, 251);
-        border: 2px solid rgb(123, 0, 255);
-        cursor: pointer;
-      "
-    ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(251, 183, 238)')"
-      class="rosa"
-      type="button"
-      style="
-        position: absolute;
-        left: 500px;
-        top: 460px;
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        font-size: 25px;
-        font-weight: bolder;
-        background-color: rgb(251, 183, 238);
-        border: 2px solid rgb(251, 130, 255);
-        cursor: pointer;
-      "
-    ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(140, 139, 139)')"
-      class="grigio"
-      type="button"
-      style="
-        position: absolute;
-        left: 640px;
-        top: 460px;
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        font-size: 25px;
-        font-weight: bolder;
-        background-color: rgb(140, 139, 139);
-        border: 2px solid rgb(44, 44, 44);
-        cursor: pointer;
-      "
-    ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('rgb(251, 183, 140)')"
-      class="arancio"
-      type="button"
-      style="
-        position: absolute;
-        left: 780px;
-        top: 460px;
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        font-size: 25px;
-        font-weight: bolder;
-        background-color: rgb(251, 183, 140);
-        border: 2px solid rgb(255, 125, 0);
-        cursor: pointer;
-      "
-    ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('gold')"
-      class="oro"
-      type="button"
-      style="
-        position: absolute;
-        left: 920px;
-        top: 460px;
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        font-size: 25px;
-        font-weight: bolder;
-        background-color: gold;
-        border: 2px solid rgb(200, 150, 0);
-        cursor: pointer;
-      "
-    ></button>
-    <button
-      v-on:click="useSunneeStore().setCapColor('silver')"
-      class="silver"
-      type="button"
-      style="
-        position: absolute;
-        left: 1060px;
-        top: 460px;
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        font-size: 25px;
-        font-weight: bolder;
-        background-color: silver;
-        border: 2px solid rgb(120, 120, 120);
-        cursor: pointer;
-      "
-    ></button>
-    <div class="absolute top-156 left-126">
-      <router-link to="/configurator" style="text-decoration: none">
-    <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn">Reset</button>
-    </router-link>
-    </div>
-    <div class="flex gap-4 absolute top-156 left-212">
       <router-link to="/configurator" style="text-decoration: none">
         <button type="button" class="custom-pill-btn invisible">Back</button>
       </router-link>
       <router-link to="/step-2" style="text-decoration: none">
         <button type="button" class="custom-pill-btn">Next</button>
       </router-link>
+    </div>
     </div>
     <div class="bottle-container-configurator">
       <!--     <img src=" sfondo.png" class="layer cap" />

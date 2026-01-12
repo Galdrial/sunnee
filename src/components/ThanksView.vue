@@ -1,23 +1,8 @@
 <template>
   <div>
-    <div class="flex flex-row justify-between items-center">
-       
-        <img
-          
-          src="../assets/img/logo2.png"
-          alt="layer-label"
-          style="position: relative; width: 150px; z-index: 10"
-        />
-      
-      <router-link to="/" style="text-decoration: none">
-        <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn">
-          Home
-        </button>
-      </router-link>
-    </div>
     <div>
       <!-- App principale -->
-      <h1 class="text-6xl font-bold text-center pt-4">Ecco la tua bottiglia!</h1>
+      <h1>Ecco la tua bottiglia!</h1>
     </div>
     <div class="bottle-container">
       <!--     <img src=" sfondo.png" class="layer cap" />

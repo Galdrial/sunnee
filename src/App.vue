@@ -1,11 +1,40 @@
+
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { useSunneeStore } from '@/stores/sunnee';
+import { RouterView, useRoute } from 'vue-router';
+const sunneeStore = useSunneeStore();
+const route = useRoute();
 </script>
 
 <template>
-  <div id="app">
+  <div id="app" class="flex flex-col min-h-screen">
+    <header class="flex-none">
+      <div class="flex flex-row justify-between items-center px-4">
+      <img
+        src="./assets/img/logo2.png"
+        alt="layer-label"
+        style="position: relative; width: 150px; z-index: 10"
+      />
+      <button v-if="['/configuratorcopy','/step-2','/step-3'].includes(route.path)" class="custom-step-btn cursor-default" disabled>Step {{ sunneeStore.step }}/3</button>
+      <template v-if="route.path == '/'">
+        <router-link to="/configuratorcopy" style="text-decoration: none">
+          <button type="button" class="custom-pill-btn">Start</button>
+        </router-link>
+      </template>
+      <template v-else>
+        <router-link to="/" style="text-decoration: none">
+        <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn">
+          Home
+        </button>
+      </router-link>
+      </template>
+    </div>
+    </header>
+    <main class="flex-1">
     <RouterView />
-    <nav class="flex fixed bottom-0 left-0 items-center justify-center flex-wrap gap-2 sm:gap-16 p-2 z-50 w-full" aria-label="Footer">
+    </main>
+    <footer class="flex-none">
+    <nav class="flex shrink-0  items-center justify-center flex-wrap gap-2 sm:gap-16 p-2 relative z-50 w-full" aria-label="Footer">
       
       <!-- Copyright and author info -->
       <p class='text-[rgb(183, 238, 251)] text-center' aria-label="Copyright © 2025 Simone Camerano">© 2025 Made with Passion by Simone Camerano</p>
@@ -26,5 +55,6 @@ import { RouterView } from 'vue-router'
         </a>
       </div>
     </nav>
+    </footer>
   </div>
 </template>

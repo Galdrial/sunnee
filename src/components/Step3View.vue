@@ -5,19 +5,6 @@ import { useSunneeStore } from '@/stores/sunnee';
 
 <template>
   <div>
-    <div class="flex flex-row justify-between items-center">
-        <img
-          src="../assets/img/logo2.png"
-          alt="layer-label"
-          style="position: relative; width: 150px; z-index: 10"
-        />
-        <button class="custom-step-btn">Step 3/3</button>
-      <router-link to="/" style="text-decoration: none">
-        <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn">
-          Home
-        </button>
-      </router-link>
-    </div>
     <div>
       <!-- App principale -->
       <h1 class="text-6xl font-bold text-center pt-4 pr-55">Scegli il colore del fondo</h1>

@@ -2,9 +2,11 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  font-weight: normal;
+  @apply flex flex-col max-w-7xl w-full mx-auto min-h-screen;
+}
+
+#app > .router-view {
+  @apply flex-1;
 }
 
 /* @media (min-width: 1024px) {
