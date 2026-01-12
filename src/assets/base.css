@@ -41,14 +41,14 @@ body {
 }
 
 h1 {
-  @apply text-5xl font-bold text-center pb-6
+  @apply text-5xl font-bold text-center pt-10 pb-6
 }
 
 .h1Configurator {
-  @apply text-5xl font-bold text-left pb-2 pt-10 px-76;
+  @apply text-5xl font-bold text-center pb-2 pt-10 w-5xl;
 }
-.h2Configurator {
-  @apply text-5xl font-bold text-left pt-10 px-110;
+.h2Configurator { 
+  @apply text-5xl font-bold text-center pt-10 w-5xl ;
 }
 
 .bottle-container {
@@ -68,6 +68,14 @@ h1 {
 
 .custom-step-btn {
   @apply relative rounded-full text-2xl font-extrabold text-white bg-[rgb(132,190,135)] border-0 px-12 py-1.5 cursor-pointer h-16 inline-block;
+}
+
+.custom-pill-btn-reset {
+  @apply relative rounded-full text-2xl font-extrabold text-white bg-[rgb(192,192,192)] border-0 px-12 py-1.5 cursor-pointer h-16 inline-block;
+}
+
+.custom-pill-btn-reset:hover {
+  @apply bg-[rgb(160,160,160)] transition-all duration-300 ease-in-out;
 }
 
 button {

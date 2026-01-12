@@ -7,16 +7,8 @@ const routes = [
     component: () => import('./components/WelcomeView.vue'),
   },
   {
-    path: '/configuratorcopy',
-    component: () => import('./components/ConfiguratorView copy.vue'),
-  },
-  {
-    path: '/step-2',
-    component: () => import('./components/Step2View.vue'),
-  },
-  {
-    path: '/step-3',
-    component: () => import('./components/Step3View.vue'),
+    path: '/configurator',
+    component: () => import('./components/ConfiguratorView.vue'),
   },
   {
     path  : '/thanks',

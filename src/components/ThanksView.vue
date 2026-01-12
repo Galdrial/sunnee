@@ -1,36 +1,17 @@
 <template>
   <div>
     <div>
-      <!-- App principale -->
-      <h1>Ecco la tua bottiglia!</h1>
+      <h1>Thank you for customizing your Sunnee bottle!</h1>
+    <p class="relative w-100 h-30 text-2xl pb-0 pt-30 left-70">
+      <span role="img" aria-label="wave">🌊</span> Your unique design helps protect the sea and gives new life to plastic waste. Together, we’re building a more sustainable future one choice at a time.<br><br>
+      We can’t wait for you to enjoy your personalized bottle. Stay inspired and keep making a difference!
+    </p>
     </div>
-    <div class="bottle-container">
-      <!--     <img src=" sfondo.png" class="layer cap" />
-  <img src="sfondo1.png" class="layer cap" />
-  <img src="sbottom.png" class="layer cap"> -->
-
-      <img
-        src="../assets/img/cap.png"
-        class="layer cap"
-        :style="{ backgroundColor: useSunneeStore().capColor, mixBlendMode: 'multiply' }"
-      />
-      <img
-        src="../assets/img/body.png"
-        class="layer body"
-        :style="{ backgroundColor: useSunneeStore().bodyColor, mixBlendMode: 'multiply' }"
-      />
-      <img
-        src="../assets/img/bottom.png"
-        class="layer bottom"
-        :style="{ backgroundColor: useSunneeStore().bottomColor, mixBlendMode: 'multiply' }"
-      />
-      <img src="../assets/img/mask.png" class="layer body" />
-      <img src="../assets/img/logo.png" class="layer label" />
-    </div>
+    <BottlePreview class="left-70 bottom-35 -z-10" />
   </div>
 </template>
 <script setup lang="ts">
-import { useSunneeStore } from '@/stores/sunnee';
+import BottlePreview from './BottlePreview.vue';
 </script>
 <style scoped>
 

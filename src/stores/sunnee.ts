@@ -20,15 +20,18 @@ export const useSunneeStore = defineStore('sunnee', () => {
       black: 'rgb(140, 139, 139)',
     };
 
+
 function advanceStep() {
+  if (step.value < 3) {
     step.value += 1;
   }
+}
 
-  function stepBack() {
-    if (step.value > 1) {
-      step.value -= 1;
-    }
+function stepBack() {
+  if (step.value > 1) {
+    step.value -= 1;
   }
+}
 
   function setCapColor(color: string) {
     capColor.value = color;

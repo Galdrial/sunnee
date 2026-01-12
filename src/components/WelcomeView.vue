@@ -1,31 +1,20 @@
 <script setup lang="ts">
-  import { useSunneeStore } from '@/stores/sunnee';
-  const sunneeStore = useSunneeStore();
+import BottlePreview from './BottlePreview.vue';
 </script>
 
 <template>
     <div>
-      <!-- App principale -->
-      <h1>Personalizza la tua bottiglia!</h1>
+      <h1>Welcome to the Sunnee Kids Bottle Configurator!</h1>
+    <p class="relative w-100 h-30 text-2xl pb-0 pt-30 left-70">
+      <span role="img" aria-label="wave">🌊</span> Create your own sustainable thermal bottle and personalize it with your favorite colors. With your first order, you’ll receive a unique bottle designed to protect the sea and our planet.<br><br>
+      Together, we can turn plastic waste into a valuable resource. Start designing your bottle now every choice makes a difference!
+    </p>
     </div>
-    <div class="bottle-container">
-      <img
-        src="../assets/img/cap.png"
-        :style="{ backgroundColor: sunneeStore.colors.red }"
-        class="layer mix-blend-multiply"
-      />
-      <img
-        src="../assets/img/body.png"
-        :style="{ backgroundColor: sunneeStore.colors.green }"
-        class="layer mix-blend-multiply"
-      />
-      <img
-        src="../assets/img/bottom.png"
-        :style="{ backgroundColor: sunneeStore.colors.skyblue }"
-        class="layer mix-blend-multiply"
-      />
-      <img src="../assets/img/mask.png" class="layer" />
-      <img src="../assets/img/logo.png" class="layer" />
-    </div>
+    <BottlePreview
+      class="left-70 bottom-35 -z-10"
+      capColor="rgb(251, 170, 161)"
+      bodyColor="rgb(210, 251, 212)"
+      bottomColor="rgb(183, 238, 251)"
+    />
   
 </template>
