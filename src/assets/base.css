@@ -1,6 +1,3 @@
-.custom-step-btn[disabled] {
-  cursor: default !important;
-}
 @import "tailwindcss";
 @font-face {
   font-family: 'ComicRelief';
@@ -41,7 +38,7 @@ body {
 }
 
 h1 {
-  @apply text-5xl font-bold text-center pt-10 pb-6
+  @apply text-5xl font-bold text-center pt-6 pb-8
 }
 
 .h1Configurator {
@@ -85,3 +82,9 @@ button {
 button.rounded-full {
   @apply cursor-pointer;
 }
+
+.custom-step-btn[disabled] {
+  cursor: default !important;
+}
+
+
