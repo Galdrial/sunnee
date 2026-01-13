@@ -88,3 +88,13 @@ button.rounded-full {
     height: 0 !important;
   }
 
+  .btn-primary,
+  .btn-secondary {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
