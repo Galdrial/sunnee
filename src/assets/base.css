@@ -36,31 +36,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (max-width: 800px) {
-  html, body {
-    scrollbar-width: none !important; /* Firefox */
-    -ms-overflow-style: none !important; /* IE and Edge */
-  }
-  
-  html::-webkit-scrollbar,
-  body::-webkit-scrollbar {
-    display: none !important; /* Chrome, Safari, Opera */
-    width: 0 !important;
-    height: 0 !important;
-  }
-}
-
 h1 {
   @apply text-5xl font-bold text-center leading-tight;
 }
 
+/* Bottle components */
 .bottle-container {
   @apply relative mx-auto w-88 h-128 flex justify-center items-center;
-  
 }
 
 .bottle-layer {
   @apply absolute top-0 left-0 w-full;
+}
+
+/* Button styles */
+button {
+  @apply z-10 drop-shadow-2xl;
+}
+
+button.rounded-full {
+  @apply cursor-pointer;
 }
 
 .btn-primary {
@@ -79,29 +74,17 @@ h1 {
   @apply bg-[rgb(100,100,100)] transition-all duration-300 ease-in-out;
 }
 
-button {
-  @apply z-10 drop-shadow-2xl;
-}
-
-button.rounded-full {
-  @apply cursor-pointer;
-}
-
+/* Mobile responsive styles */
 @media (max-width: 800px) {
-  .btn-primary,
-  .btn-secondary {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    padding: 0;
-    font-size: 1rem;
-    line-height: 1.2;
+  html, body {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* IE and Edge */
   }
-}
-
-
-
-
-
-
+  
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none !important; /* Chrome, Safari, Opera */
+    width: 0 !important;
+    height: 0 !important;
+  }
 
