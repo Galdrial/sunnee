@@ -174,6 +174,12 @@ function handleColorClick(value: string) {
     margin-top: 3rem;
   }
   
+  #color-selection button {
+    width: 5rem;
+    height: 5rem;
+    font-size: 1rem;
+  }
+  
   .start-btn-wrapper {
     display: flex;
     justify-content: center;
