@@ -13,7 +13,7 @@ export const useSunneeStore = defineStore('sunnee', () => {
   const step = ref(1);
   // Available color options
   const colors = {
-    default: 'whitesmoke',
+    white: 'whitesmoke',
     red: 'rgb(251, 170, 161)',
     green: 'rgb(210, 251, 212)',
     skyblue: 'rgb(183, 238, 251)',
@@ -54,9 +54,9 @@ export const useSunneeStore = defineStore('sunnee', () => {
 
   // Reset all colors and step to default
   function reset() {
-    capColor.value = colors.default;
-    bodyColor.value = colors.default;
-    bottomColor.value = colors.default;
+    capColor.value = colors.white;
+    bodyColor.value = colors.white;
+    bottomColor.value = colors.white;
     step.value = 1;
   }
 

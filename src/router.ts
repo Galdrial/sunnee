@@ -11,6 +11,10 @@ const routes = [
     component: () => import('./components/ConfiguratorView.vue'),
   },
   {
+    path: '/configurator/:step',
+    component: () => import('./components/ConfiguratorView.vue'),
+  },
+  {
     path  : '/thanks',
     component: () => import('./components/ThanksView.vue'),
   }

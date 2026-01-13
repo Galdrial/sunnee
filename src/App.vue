@@ -16,18 +16,12 @@ const route = useRoute();
         style="position: relative; width: 150px; z-index: 10"
       />
       <button v-if="['/configurator','/step-2','/step-3'].includes(route.path)" class="custom-step-btn cursor-default" disabled>Step {{ sunneeStore.step }}/3</button>
-      <template v-if="route.path == '/'">
-        <router-link to="/configurator" style="text-decoration: none">
-          <button type="button" class="custom-pill-btn">Start</button>
-        </router-link>
-      </template>
-      <template v-else>
-        <router-link to="/" style="text-decoration: none">
+     
+      <router-link to="/" style="text-decoration: none">
         <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn">
           Home
         </button>
       </router-link>
-      </template>
     </div>
     </header>
     <main class="flex-1">

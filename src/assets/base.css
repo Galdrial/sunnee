@@ -31,14 +31,13 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
-  font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
-  @apply text-5xl font-bold text-center pt-6 pb-8
+  @apply text-5xl font-bold text-center leading-tight;
 }
 
 .h1Configurator {
@@ -49,7 +48,8 @@ h1 {
 }
 
 .bottle-container {
-  @apply relative mx-auto w-88 h-128;
+  @apply relative mx-auto w-88 h-128 flex justify-center items-center;
+  
 }
 
 .layer {
