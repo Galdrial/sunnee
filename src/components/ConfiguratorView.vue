@@ -166,12 +166,12 @@ function handleColorClick(value: string) {
     width: 16rem;
     height: 24rem;
     bottom: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   
   #color-selection {
     order: 3;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
   
   .start-btn-wrapper {
