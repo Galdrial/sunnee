@@ -17,7 +17,7 @@ import BottlePreview from './BottlePreview.vue';
       </p>
       <div class="start-btn-wrapper">
         <router-link to="/configurator" style="text-decoration: none">
-          <button type="button" class="custom-pill-btn large-round-btn">Start Designing Your Bottle</button>
+          <button type="button" class="custom-pill-btn large-round-btn">Start</button>
         </router-link>
       </div>
     </div>
