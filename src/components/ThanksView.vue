@@ -9,7 +9,7 @@
       </p>
       <div class="start-btn-wrapper">
         <router-link to="/configurator" style="text-decoration: none">
-          <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn large-round-btn">
+          <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn">
             Restart
           </button>
         </router-link>
