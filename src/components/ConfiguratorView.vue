@@ -76,7 +76,7 @@ function handleColorClick(value: string) {
         <button v-if="sunneeStore.step !== 1" @click="sunneeStore.stepBack" type="button" class="btn-primary" data-icon="back">Back</button>
         <button v-else type="button" class="btn-primary invisible">Back</button>
         <router-link v-if="sunneeStore.step == 3" to="/thanks" style="text-decoration: none">
-          <button type="button" class="btn-primary" data-icon="send">Send !</button>
+          <button type="button" class="btn-primary" data-icon="send">Send</button>
         </router-link>
         <button v-else @click="sunneeStore.advanceStep" type="button" class="btn-primary" data-icon="next">Next</button>
       </div>
