@@ -87,23 +87,23 @@ function handleColorClick(value: string) {
         <img
           src="../assets/img/cap.png"
           alt="Bottle cap"
-          class="layer cap"
+          class="bottle-layer"
           :style="{ backgroundColor: useSunneeStore().capColor, mixBlendMode: 'multiply' }"
         />
         <img
           src="../assets/img/body.png"
           alt="Bottle body"
-          class="layer body"
+          class="bottle-layer"
           :style="{ backgroundColor: useSunneeStore().bodyColor, mixBlendMode: 'multiply' }"
         />
         <img
           src="../assets/img/bottom.png"
           alt="Bottle bottom"
-          class="layer bottom"
+          class="bottle-layer"
           :style="{ backgroundColor: useSunneeStore().bottomColor, mixBlendMode: 'multiply' }"
         />
-        <img src="../assets/img/mask.png" alt="Bottle mask overlay" class="layer body" />
-        <img src="../assets/img/logo.png" alt="Sunnee Kids logo" class="layer label" />
+        <img src="../assets/img/mask.png" alt="Bottle mask overlay" class="bottle-layer" />
+        <img src="../assets/img/logo.png" alt="Sunnee Kids logo" class="bottle-layer" />
         <figcaption class="sr-only">Bottle preview with selected colors</figcaption>
       </figure>
   </section>

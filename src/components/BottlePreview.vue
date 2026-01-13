@@ -22,25 +22,25 @@ const bottom = computed(() => props.bottomColor ?? sunneeStore.bottomColor);
     <img
       src="../assets/img/cap.png"
       alt="Bottle cap"
-      class="layer cap"
+      class="bottle-layer"
       :style="{ backgroundColor: cap, mixBlendMode: 'multiply' }"
     />
     <!-- Body image with dynamic color -->
     <img
       src="../assets/img/body.png"
       alt="Bottle body"
-      class="layer body"
+      class="bottle-layer"
       :style="{ backgroundColor: body, mixBlendMode: 'multiply' }"
     />
     <!-- Bottom image with dynamic color -->
     <img
       src="../assets/img/bottom.png"
       alt="Bottle bottom"
-      class="layer bottom"
+      class="bottle-layer"
       :style="{ backgroundColor: bottom, mixBlendMode: 'multiply' }"
     />
     <!-- Mask and logo overlays -->
-    <img src="../assets/img/mask.png" alt="Bottle mask overlay" class="layer body" />
-    <img src="../assets/img/logo.png" alt="Sunnee Kids logo" class="layer label" />
+    <img src="../assets/img/mask.png" alt="Bottle mask overlay" class="bottle-layer" />
+    <img src="../assets/img/logo.png" alt="Sunnee Kids logo" class="bottle-layer" />
   </div>
 </template>
