@@ -15,9 +15,9 @@ import BottlePreview from './BottlePreview.vue';
         Together, we can turn plastic waste into a valuable resource. Start designing your bottle now
         every choice makes a difference !
       </p>
-      <div class="start-btn-wrapper">
+      <div class="button-wrapper">
         <router-link to="/configurator" style="text-decoration: none">
-          <button type="button" class="custom-pill-btn">Design</button>
+          <button type="button" class="btn-primary">Design</button>
         </router-link>
       </div>
     </div>
@@ -49,7 +49,7 @@ import BottlePreview from './BottlePreview.vue';
   padding-top: 3rem;
   padding-left: 4rem;
 }
-.start-btn-wrapper {
+.button-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,7 +72,7 @@ import BottlePreview from './BottlePreview.vue';
     text-align: center;
     padding-top: 0;
   }
-  .start-btn-wrapper {
+  .button-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;

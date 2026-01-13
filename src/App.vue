@@ -23,7 +23,7 @@ const route = useRoute();
       </div>
      
       <router-link to="/" style="text-decoration: none">
-        <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn" data-icon="home">
+        <button v-on:click="useSunneeStore().reset()" type="button" class="btn-primary" data-icon="home">
           Home
         </button>
       </router-link>

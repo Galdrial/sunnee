@@ -1,22 +1,22 @@
 <template>
   <!-- Thank you page after bottle configuration -->
-  <section class="welcome-grid">
-    <div class="welcome-text">
+  <section class="page-grid">
+    <div class="page-content">
       <h1>Thank you for customizing your Sunnee bottle!</h1>
       <p class="text-2xl leading-relaxed">
         Your unique design helps protect the sea and gives new life to plastic waste. Together,
         we’re building a more sustainable future one choice at a time.<br /><br />
           We can’t wait for you to enjoy your personalized bottle and see the positive impact you’re making. Stay inspired and keep making a difference every day !
       </p>
-      <div class="start-btn-wrapper">
+      <div class="button-wrapper">
         <router-link to="/configurator" style="text-decoration: none">
-          <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn">
+          <button v-on:click="useSunneeStore().reset()" type="button" class="btn-primary">
             Restart
           </button>
         </router-link>
       </div>
     </div>
-    <figure class="-z-10 welcome-bottle">
+    <figure class="-z-10 bottle-preview">
       <BottlePreview />
       <figcaption class="sr-only">Bottle preview with your selected colors</figcaption>
     </figure>
@@ -28,7 +28,7 @@ import { useSunneeStore } from '@/stores/sunnee';
 import BottlePreview from './BottlePreview.vue';
 </script>
 <style scoped>
-.welcome-grid {
+.page-grid {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 2rem;
@@ -37,20 +37,20 @@ import BottlePreview from './BottlePreview.vue';
   margin: auto;
   min-height: 80vh;
 }
-.welcome-text {
+.page-content {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   padding-top: 3rem;
   padding-left: 4rem;
 }
-.start-btn-wrapper {
+.button-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 10rem;
 }
-.welcome-bottle {
+.bottle-preview {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,16 +58,16 @@ import BottlePreview from './BottlePreview.vue';
   padding-bottom: 14rem;
 }
 @media (max-width: 800px) {
-  .welcome-grid {
+  .page-grid {
     grid-template-columns: 1fr;
     gap: 0;
   }
-  .welcome-text {
+  .page-content {
     padding-left: 0;
     text-align: center;
     padding-top: 0;
   }
-  .start-btn-wrapper {
+  .button-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;

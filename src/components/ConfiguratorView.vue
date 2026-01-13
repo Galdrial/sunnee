@@ -44,9 +44,9 @@ function handleColorClick(value: string) {
 }
 </script>
 <template>
-  <!-- Welcome message and project introduction -->
-  <section class="welcome-grid">
-    <div class="welcome-text">
+  <!-- Configurator layout with bottle preview -->
+  <section class="page-grid">
+    <div class="page-content">
       <h1>Choose the color of the
       <h1 v-if="sunneeStore.step === 1">CAP</h1>
       <h1 v-else-if="sunneeStore.step === 2">BODY</h1>
@@ -65,25 +65,25 @@ function handleColorClick(value: string) {
           {{ name.charAt(0).toUpperCase() + name.slice(1) }}
         </button>
       </div>
-      <nav class="start-btn-wrapper" aria-label="Step navigation">
+      <nav class="button-controls" aria-label="Step navigation">
        <div>
         <router-link to="/configurator" style="text-decoration: none">
-          <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn-reset" data-icon="reset">
+          <button v-on:click="useSunneeStore().reset()" type="button" class="btn-secondary" data-icon="reset">
             Reset
           </button>
         </router-link>
       </div>
       <div class="flex gap-4">
-        <button v-if="sunneeStore.step !== 1" @click="sunneeStore.stepBack" type="button" class="custom-pill-btn" data-icon="back">Back</button>
-        <button v-else type="button" class="custom-pill-btn invisible">Back</button>
+        <button v-if="sunneeStore.step !== 1" @click="sunneeStore.stepBack" type="button" class="btn-primary" data-icon="back">Back</button>
+        <button v-else type="button" class="btn-primary invisible">Back</button>
         <router-link v-if="sunneeStore.step == 3" to="/thanks" style="text-decoration: none">
-          <button type="button" class="custom-pill-btn" data-icon="send">Send</button>
+          <button type="button" class="btn-primary" data-icon="send">Send !</button>
         </router-link>
-        <button v-else @click="sunneeStore.advanceStep" type="button" class="custom-pill-btn" data-icon="next">Next</button>
+        <button v-else @click="sunneeStore.advanceStep" type="button" class="btn-primary" data-icon="next">Next</button>
       </div>
     </nav>
     </div>
-    <figure class="-z-10 welcome-bottle">
+    <figure class="-z-10 bottle-preview">
         <img
           src="../assets/img/cap.png"
           alt="Bottle cap"
@@ -110,7 +110,7 @@ function handleColorClick(value: string) {
 
 </template>
 <style scoped>
-.welcome-grid {
+.page-grid {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 2rem;
@@ -119,20 +119,20 @@ function handleColorClick(value: string) {
   margin: auto;
   min-height: 80vh;
 }
-.welcome-text {
+.page-content {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   padding-top: 3rem;
   padding-left: 4rem;
 }
-.start-btn-wrapper {
+.button-controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10rem;
 }
-.welcome-bottle {
+.bottle-preview {
   position:relative;
   margin:auto;
   display: flex;
@@ -144,25 +144,25 @@ function handleColorClick(value: string) {
   bottom: 7rem;
 }
 @media (max-width: 800px) {
-  .welcome-grid {
+  .page-grid {
     grid-template-columns: 1fr;
     gap: 0;
     display: flex;
     flex-direction: column;
   }
   
-  .welcome-text {
+  .page-content {
     padding-left: 0;
     text-align: center;
     padding-top: 0;
     display: contents;
   }
   
-  .welcome-text h1 {
+  .page-content h1 {
     order: 1;
   }
   
-  .welcome-bottle {
+  .bottle-preview {
     order: 2;
     width: 16rem;
     height: 24rem;
@@ -181,7 +181,7 @@ function handleColorClick(value: string) {
     font-size: 1rem;
   }
   
-  .start-btn-wrapper {
+  .button-controls {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,7 +193,7 @@ function handleColorClick(value: string) {
     margin-bottom: 3rem;
   }
   
-  .start-btn-wrapper > div {
+  .button-controls > div {
     display: contents;
   }
   

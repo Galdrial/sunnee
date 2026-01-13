@@ -62,19 +62,20 @@ h1 {
 .layer {
   @apply absolute top-0 left-0 w-full;
 }
-.custom-pill-btn {
+
+.btn-primary {
   @apply relative rounded-full text-2xl font-extrabold text-white bg-[rgb(90,160,95)] border-0 px-12 py-1.5 cursor-pointer h-16 inline-block;
 }
 
-.custom-pill-btn:hover {
+.btn-primary:hover {
   @apply bg-[rgb(75,140,80)] transition-all duration-300 ease-in-out;
 }
 
-.custom-pill-btn-reset {
+.btn-secondary {
   @apply relative rounded-full text-2xl font-extrabold text-white bg-[rgb(120,120,120)] border-0 px-12 py-1.5 cursor-pointer h-16 inline-block;
 }
 
-.custom-pill-btn-reset:hover {
+.btn-secondary:hover {
   @apply bg-[rgb(100,100,100)] transition-all duration-300 ease-in-out;
 }
 
@@ -87,8 +88,8 @@ button.rounded-full {
 }
 
 @media (max-width: 800px) {
-  .custom-pill-btn,
-  .custom-pill-btn-reset {
+  .btn-primary,
+  .btn-secondary {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
