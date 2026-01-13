@@ -1,7 +1,9 @@
 
 <script setup lang="ts">
+// Import store for bottle configuration and routing utilities
 import { useSunneeStore } from '@/stores/sunnee';
 import { RouterView, useRoute } from 'vue-router';
+
 const sunneeStore = useSunneeStore();
 const route = useRoute();
 </script>

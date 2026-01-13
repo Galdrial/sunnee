@@ -1,4 +1,5 @@
 <template>
+  <!-- Thank you page after bottle configuration -->
   <section class="welcome-grid">
     <div class="welcome-text">
       <h1>Thank you for customizing your Sunnee bottle!</h1>
@@ -22,6 +23,7 @@
   </section>
 </template>
 <script setup lang="ts">
+// Import store for reset functionality and bottle preview component
 import { useSunneeStore } from '@/stores/sunnee';
 import BottlePreview from './BottlePreview.vue';
 </script>

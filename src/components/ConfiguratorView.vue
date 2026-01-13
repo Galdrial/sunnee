@@ -3,7 +3,8 @@
 // Import the store for managing bottle state and steps
 import { useSunneeStore } from '@/stores/sunnee';
 import { onMounted, watch } from 'vue';
-// All'avvio, sincronizza lo step con l'URL
+
+// On mount, synchronize the step with the URL
 onMounted(() => {
   const match = window.location.pathname.match(/step-(\d)/)
   if (match) {
@@ -18,11 +19,11 @@ onMounted(() => {
 })
 const sunneeStore = useSunneeStore()
 
-// Aggiorna l'URL ad ogni cambio step
+// Update URL on every step change
 watch(
   () => sunneeStore.step,
   (newStep) => {
-    // Aggiorna solo se siamo nella pagina configurator
+    // Update only if we are on the configurator page
     if (window.location.pathname.startsWith('/configurator')) {
       const stepUrl = `/configurator/step-${newStep}`
       window.history.replaceState(null, '', stepUrl)
