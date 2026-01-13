@@ -34,7 +34,7 @@ const route = useRoute();
     <nav class="flex shrink-0  items-center justify-center flex-wrap gap-2 sm:gap-16 p-2 relative z-50 w-full" aria-label="Footer">
       
       <!-- Copyright and author info -->
-      <p class='text-[rgb(183, 238, 251)] text-center' aria-label="Copyright © 2025 Simone Camerano">© 2025 Made with Passion by Simone Camerano</p>
+      <p class='text-gray-800 text-center' aria-label="Copyright © 2025 Simone Camerano">© 2025 Made with Passion by Simone Camerano</p>
       
       <!-- Social links section: GitHub, personal website, LinkedIn -->
       <div class="flex justify-center gap-4 sm:gap-2" aria-label="Social links">

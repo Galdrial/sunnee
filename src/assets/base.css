@@ -70,23 +70,23 @@ h1 {
   @apply absolute top-0 left-0 w-full;
 }
 .custom-pill-btn {
-  @apply relative rounded-full text-2xl font-extrabold text-white bg-[rgb(132,190,135)] border-0 px-12 py-1.5 cursor-pointer h-16 inline-block;
+  @apply relative rounded-full text-2xl font-extrabold text-white bg-[rgb(90,160,95)] border-0 px-12 py-1.5 cursor-pointer h-16 inline-block;
 }
 
 .custom-pill-btn:hover {
-  @apply bg-[rgb(110,160,115)] transition-all duration-300 ease-in-out;
+  @apply bg-[rgb(75,140,80)] transition-all duration-300 ease-in-out;
 }
 
 .custom-step-btn {
-  @apply relative rounded-full text-2xl font-extrabold text-white bg-[rgb(132,190,135)] border-0 px-12 py-1.5 cursor-pointer h-16 inline-block;
+  @apply relative rounded-full text-2xl font-extrabold text-white bg-[rgb(90,160,95)] border-0 px-12 py-1.5 cursor-pointer h-16 inline-block;
 }
 
 .custom-pill-btn-reset {
-  @apply relative rounded-full text-2xl font-extrabold text-white bg-[rgb(192,192,192)] border-0 px-12 py-1.5 cursor-pointer h-16 inline-block;
+  @apply relative rounded-full text-2xl font-extrabold text-white bg-[rgb(120,120,120)] border-0 px-12 py-1.5 cursor-pointer h-16 inline-block;
 }
 
 .custom-pill-btn-reset:hover {
-  @apply bg-[rgb(160,160,160)] transition-all duration-300 ease-in-out;
+  @apply bg-[rgb(100,100,100)] transition-all duration-300 ease-in-out;
 }
 
 button {
