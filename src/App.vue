@@ -12,7 +12,7 @@ const route = useRoute();
       <div class="flex flex-row justify-between items-center px-4">
       <img
         src="./assets/img/logo2.png"
-        alt="layer-label"
+        alt="Sunnee Kids logo"
         style="position: relative; width: 150px; z-index: 10"
       />
       <div v-if="['/configurator','/step-2','/step-3'].includes(route.path)" class="step-indicator">
