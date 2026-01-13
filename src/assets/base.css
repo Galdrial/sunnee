@@ -97,7 +97,7 @@ h1 {
 }
 
 button {
-  @apply z-10 shadow-2xl;
+  @apply z-10 drop-shadow-2xl;
 }
 
 button.rounded-full {
@@ -107,5 +107,7 @@ button.rounded-full {
 .custom-step-btn[disabled] {
   cursor: default !important;
 }
+
+
 
 
