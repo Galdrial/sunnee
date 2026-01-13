@@ -13,11 +13,11 @@ import BottlePreview from './BottlePreview.vue';
         your first order, you’ll receive a unique bottle designed to protect the sea and our
         planet.<br /><br />
         Together, we can turn plastic waste into a valuable resource. Start designing your bottle now
-        every choice makes a difference!
+        every choice makes a difference !
       </p>
       <div class="start-btn-wrapper">
         <router-link to="/configurator" style="text-decoration: none">
-          <button type="button" class="custom-pill-btn">Start</button>
+          <button type="button" class="custom-pill-btn large-round-btn">Start</button>
         </router-link>
       </div>
     </div>
@@ -73,16 +73,16 @@ import BottlePreview from './BottlePreview.vue';
     padding-top: 0;
   }
   .start-btn-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   p {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 </style>

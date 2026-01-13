@@ -15,10 +15,13 @@ const route = useRoute();
         alt="layer-label"
         style="position: relative; width: 150px; z-index: 10"
       />
-      <button v-if="['/configurator','/step-2','/step-3'].includes(route.path)" class="custom-step-btn cursor-default" disabled>Step {{ sunneeStore.step }}/3</button>
+      <div v-if="['/configurator','/step-2','/step-3'].includes(route.path)" class="step-indicator">
+        <div class="step-circle">{{ sunneeStore.step }}</div>
+        <span class="step-text">/ 3</span>
+      </div>
      
       <router-link to="/" style="text-decoration: none">
-        <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn">
+        <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn" data-icon="home">
           Home
         </button>
       </router-link>
@@ -52,3 +55,43 @@ const route = useRoute();
     </footer>
   </div>
 </template>
+
+<style scoped>
+.step-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.step-circle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: rgb(251, 183, 140);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(245, 158, 66, 0.3);
+}
+
+.step-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+@media (max-width: 800px) {
+  .step-circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .step-text {
+    font-size: 1.2rem;
+  }
+}
+</style>

@@ -50,13 +50,6 @@ body {
   }
 }
 
-@media (min-width: 801px) {
-  body {
-    overflow-y: hidden;
-    height: 100vh;
-  }
-}
-
 h1 {
   @apply text-5xl font-bold text-center leading-tight;
 }
@@ -107,6 +100,25 @@ button.rounded-full {
 .custom-step-btn[disabled] {
   cursor: default !important;
 }
+
+@media (max-width: 800px) {
+  .custom-pill-btn,
+  .custom-pill-btn-reset {
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+
+
+
 
 
 

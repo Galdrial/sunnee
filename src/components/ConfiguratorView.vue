@@ -67,18 +67,18 @@ function handleColorClick(value: string) {
       <nav class="start-btn-wrapper" aria-label="Step navigation">
        <div>
         <router-link to="/configurator" style="text-decoration: none">
-          <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn-reset">
+          <button v-on:click="useSunneeStore().reset()" type="button" class="custom-pill-btn-reset" data-icon="reset">
             Reset
           </button>
         </router-link>
       </div>
       <div class="flex gap-4">
-        <button v-if="sunneeStore.step !== 1" @click="sunneeStore.stepBack" type="button" class="custom-pill-btn">Back</button>
+        <button v-if="sunneeStore.step !== 1" @click="sunneeStore.stepBack" type="button" class="custom-pill-btn" data-icon="back">Back</button>
         <button v-else type="button" class="custom-pill-btn invisible">Back</button>
         <router-link v-if="sunneeStore.step == 3" to="/thanks" style="text-decoration: none">
-          <button type="button" class="custom-pill-btn">Send !</button>
+          <button type="button" class="custom-pill-btn" data-icon="send">Send !</button>
         </router-link>
-        <button v-else @click="sunneeStore.advanceStep" type="button" class="custom-pill-btn">Next</button>
+        <button v-else @click="sunneeStore.advanceStep" type="button" class="custom-pill-btn" data-icon="next">Next</button>
       </div>
     </nav>
     </div>
@@ -143,18 +143,50 @@ function handleColorClick(value: string) {
   .welcome-grid {
     grid-template-columns: 1fr;
     gap: 0;
+    display: flex;
+    flex-direction: column;
   }
+  
   .welcome-text {
     padding-left: 0;
     text-align: center;
     padding-top: 0;
+    display: contents;
   }
+  
+  .welcome-text h1 {
+    order: 1;
+  }
+  
+  .welcome-bottle {
+    order: 2;
+    width: 16rem;
+    height: 24rem;
+    bottom: 0;
+    margin-bottom: 2rem;
+  }
+  
+  #color-selection {
+    order: 3;
+    margin-top: 2rem;
+  }
+  
   .start-btn-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+    order: 4;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
   }
+  
+  .start-btn-wrapper > div {
+    display: contents;
+  }
+  
   h1 {
     font-size: 2rem;
   }
