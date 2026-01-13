@@ -1,12 +1,12 @@
 // Import global styles
-import './assets/main.css'
 import './assets/base.css'
+import './assets/main.css'
 
 // Import Vue and core dependencies
-import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import router from './router'
+import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router'
 
 // Create and configure Vue application
 const app = createApp(App)
