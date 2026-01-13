@@ -6,7 +6,7 @@
       <p class="text-2xl leading-relaxed">
         Your unique design helps protect the sea and gives new life to plastic waste. Together,
         we’re building a more sustainable future one choice at a time.<br /><br />
-          We can’t wait for you to enjoy your personalized bottle and see the positive impact you’re making. Stay inspired and keep making a difference every day !
+          We can’t wait for you to enjoy your personalized bottle and see the positive impact you’re making. Stay inspired and keep making a difference every day!
       </p>
       <div class="button-wrapper">
         <router-link to="/configurator" style="text-decoration: none">
